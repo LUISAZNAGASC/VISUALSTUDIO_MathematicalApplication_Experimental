@@ -2,5 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="SCRIPTS\CORE\WelcomeApplication.cpp" />
+    <ClCompile Include="SCRIPTS\TRANSFORMATIONS\VectorTwo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SCRIPTS\TRANSFORMATIONS\VectorTwo.hpp" />
   </ItemGroup>
 </Project>

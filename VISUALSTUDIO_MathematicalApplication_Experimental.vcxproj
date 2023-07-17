@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="SCRIPTS\CORE\WelcomeApplication.cpp" />
+    <ClCompile Include="SCRIPTS\TRANSFORMATIONS\VectorTwo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SCRIPTS\TRANSFORMATIONS\VectorTwo.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
