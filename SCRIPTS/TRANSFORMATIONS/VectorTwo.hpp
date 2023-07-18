@@ -7,8 +7,8 @@
 class VectorTwo
 {
 private:
-	float x = 0.0F;
-	float y = 0.0F;
+	double x = 0.0;
+	double y = 0.0;
 
 	friend std::ostream& operator<<(
 		std::ostream& ostreamComponentToDisplay,
@@ -19,8 +19,8 @@ protected:
 public:
 	VectorTwo();
 	VectorTwo(
-		const float newXToInitialize,
-		const float newYToInitialize);
+		const double newXToInitialize,
+		const double newYToInitialize);
 	VectorTwo(
 		const VectorTwo& otherVectorTwoToCopy);
 	~VectorTwo();
@@ -52,17 +52,17 @@ public:
 		const VectorTwo& otherVectorTwoToAssign);
 
 	const VectorTwo operator*(
-		const float specificValueToAssign) const;
+		const double specificValueToAssign) const;
 	const VectorTwo operator/(
-		const float specificValueToAssign) const;
+		const double specificValueToAssign) const;
 
 	const VectorTwo& operator*=(
-		const float specificValueToAssign);
+		const double specificValueToAssign);
 	const VectorTwo& operator/=(
-		const float specificValueToAssign);
+		const double specificValueToAssign);
 
-	const float GetX() const;
-	const float GetY() const;
+	const double GetX() const;
+	const double GetY() const;
 
 	static const bool CompareBetween(
 		const VectorTwo& firstVectorTwoToCompare,
@@ -71,22 +71,22 @@ public:
 	static const VectorTwo ComputeUnclampedInterpolationUsing(
 		const VectorTwo& firstVectorTwoToCompute,
 		const VectorTwo& secondVectorTwoToCompute,
-		const float specificTimeToCompute);
+		const double specificTimeToCompute);
 	static const VectorTwo ComputeClampedInterpolationUsing(
 		const VectorTwo& firstVectorTwoToCompute,
 		const VectorTwo& secondVectorToCompute,
-		float specificTimeToCompute);
+		double specificTimeToCompute);
 	static const VectorTwo ComputeQuadraticBezierCurveUsing(
 		const VectorTwo& firstVectorTwoToCompute,
 		const VectorTwo& secondVectorTwoToCompute,
 		const VectorTwo& thirdVectorTwoToCompute,
-		const float specificTimeToCompute);
+		const double specificTimeToCompute);
 	static const VectorTwo ComputeCubicBezierCurveUsing(
 		const VectorTwo& firstVectorTwoToCompute,
 		const VectorTwo& secondVectorTwoToCompute,
 		const VectorTwo& thirdVectorTwoToCompute,
 		const VectorTwo& fourthVectorTwoToCompute,
-		const float specificTimeToCompute);
+		const double specificTimeToCompute);
 };
 
 #endif

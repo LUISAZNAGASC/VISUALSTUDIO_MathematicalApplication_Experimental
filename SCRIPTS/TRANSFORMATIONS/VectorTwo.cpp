@@ -16,16 +16,16 @@ std::ostream& operator<<(
 }
 
 VectorTwo::VectorTwo() :
-	x(0.0F),
-	y(0.0F)
+	x(0.0),
+	y(0.0)
 {
-	x = 0.0F;
-	y = 0.0F;
+	x = 0.0;
+	y = 0.0;
 }
 
 VectorTwo::VectorTwo(
-	const float newXToInitialize,
-	const float newYToInitialize) :
+	const double newXToInitialize,
+	const double newYToInitialize) :
 	x(newXToInitialize),
 	y(newYToInitialize)
 {
@@ -44,8 +44,8 @@ VectorTwo::VectorTwo(
 
 VectorTwo::~VectorTwo()
 {
-	x = 0.0F;
-	y = 0.0F;
+	x = 0.0;
+	y = 0.0;
 }
 
 const bool VectorTwo::operator==(
@@ -77,8 +77,8 @@ const VectorTwo& VectorTwo::operator=(
 	}
 	else
 	{
-		const float vectorTwoDesiredX = otherVectorTwoToAssign.GetX();
-		const float vectorTwoDesiredY = otherVectorTwoToAssign.GetY();
+		const double vectorTwoDesiredX = otherVectorTwoToAssign.GetX();
+		const double vectorTwoDesiredY = otherVectorTwoToAssign.GetY();
 
 		x = vectorTwoDesiredX;
 		y = vectorTwoDesiredY;
@@ -90,8 +90,8 @@ const VectorTwo& VectorTwo::operator=(
 const VectorTwo VectorTwo::operator+(
 	const VectorTwo& otherVectorTwoToAssign) const
 {
-	const float vectorTwoDesiredX = GetX() + otherVectorTwoToAssign.GetX();
-	const float vectorTwoDesiredY = GetY() + otherVectorTwoToAssign.GetY();
+	const double vectorTwoDesiredX = GetX() + otherVectorTwoToAssign.GetX();
+	const double vectorTwoDesiredY = GetY() + otherVectorTwoToAssign.GetY();
 
 	return VectorTwo(
 		vectorTwoDesiredX,
@@ -101,8 +101,8 @@ const VectorTwo VectorTwo::operator+(
 const VectorTwo VectorTwo::operator-(
 	const VectorTwo& otherVectorTwoToAssign) const
 {
-	const float vectorTwoDesiredX = GetX() - otherVectorTwoToAssign.GetX();
-	const float vectorTwoDesiredY = GetY() - otherVectorTwoToAssign.GetY();
+	const double vectorTwoDesiredX = GetX() - otherVectorTwoToAssign.GetX();
+	const double vectorTwoDesiredY = GetY() - otherVectorTwoToAssign.GetY();
 
 	return VectorTwo(
 		vectorTwoDesiredX,
@@ -112,8 +112,8 @@ const VectorTwo VectorTwo::operator-(
 const VectorTwo VectorTwo::operator*(
 	const VectorTwo& otherVectorTwoToAssign) const
 {
-	const float vectorTwoDesiredX = GetX() * otherVectorTwoToAssign.GetX();
-	const float vectorTwoDesiredY = GetY() * otherVectorTwoToAssign.GetY();
+	const double vectorTwoDesiredX = GetX() * otherVectorTwoToAssign.GetX();
+	const double vectorTwoDesiredY = GetY() * otherVectorTwoToAssign.GetY();
 
 	return VectorTwo(
 		vectorTwoDesiredX,
@@ -123,8 +123,8 @@ const VectorTwo VectorTwo::operator*(
 const VectorTwo VectorTwo::operator/(
 	const VectorTwo& otherVectorTwoToAssign) const
 {
-	const float vectorTwoDesiredX = GetX() / otherVectorTwoToAssign.GetX();
-	const float vectorTwoDesiredY = GetY() / otherVectorTwoToAssign.GetY();
+	const double vectorTwoDesiredX = GetX() / otherVectorTwoToAssign.GetX();
+	const double vectorTwoDesiredY = GetY() / otherVectorTwoToAssign.GetY();
 
 	return VectorTwo(
 		vectorTwoDesiredX,
@@ -134,8 +134,8 @@ const VectorTwo VectorTwo::operator/(
 const VectorTwo& VectorTwo::operator+=(
 	const VectorTwo& otherVectorTwoToAssign)
 {
-	const float vectorTwoDesiredX = GetX() + otherVectorTwoToAssign.GetX();
-	const float vectorTwoDesiredY = GetY() + otherVectorTwoToAssign.GetY();
+	const double vectorTwoDesiredX = GetX() + otherVectorTwoToAssign.GetX();
+	const double vectorTwoDesiredY = GetY() + otherVectorTwoToAssign.GetY();
 
 	x = vectorTwoDesiredX;
 	y = vectorTwoDesiredY;
@@ -146,8 +146,8 @@ const VectorTwo& VectorTwo::operator+=(
 const VectorTwo& VectorTwo::operator-=(
 	const VectorTwo& otherVectorTwoToAssign)
 {
-	const float vectorTwoDesiredX = GetX() - otherVectorTwoToAssign.GetX();
-	const float vectorTwoDesiredY = GetY() - otherVectorTwoToAssign.GetY();
+	const double vectorTwoDesiredX = GetX() - otherVectorTwoToAssign.GetX();
+	const double vectorTwoDesiredY = GetY() - otherVectorTwoToAssign.GetY();
 
 	x = vectorTwoDesiredX;
 	y = vectorTwoDesiredY;
@@ -158,8 +158,8 @@ const VectorTwo& VectorTwo::operator-=(
 const VectorTwo& VectorTwo::operator*=(
 	const VectorTwo& otherVectorTwoToAssign)
 {
-	const float vectorTwoDesiredX = GetX() * otherVectorTwoToAssign.GetX();
-	const float vectorTwoDesiredY = GetY() * otherVectorTwoToAssign.GetY();
+	const double vectorTwoDesiredX = GetX() * otherVectorTwoToAssign.GetX();
+	const double vectorTwoDesiredY = GetY() * otherVectorTwoToAssign.GetY();
 
 	x = vectorTwoDesiredX;
 	y = vectorTwoDesiredY;
@@ -170,8 +170,8 @@ const VectorTwo& VectorTwo::operator*=(
 const VectorTwo& VectorTwo::operator/=(
 	const VectorTwo& otherVectorTwoToAssign)
 {
-	const float vectorTwoDesiredX = GetX() / otherVectorTwoToAssign.GetX();
-	const float vectorTwoDesiredY = GetY() / otherVectorTwoToAssign.GetY();
+	const double vectorTwoDesiredX = GetX() / otherVectorTwoToAssign.GetX();
+	const double vectorTwoDesiredY = GetY() / otherVectorTwoToAssign.GetY();
 
 	x = vectorTwoDesiredX;
 	y = vectorTwoDesiredY;
@@ -180,10 +180,10 @@ const VectorTwo& VectorTwo::operator/=(
 }
 
 const VectorTwo VectorTwo::operator*(
-	const float specificValueToAssign) const
+	const double specificValueToAssign) const
 {
-	const float vectorTwoDesiredX = GetX() * specificValueToAssign;
-	const float vectorTwoDesiredY = GetY() * specificValueToAssign;
+	const double vectorTwoDesiredX = GetX() * specificValueToAssign;
+	const double vectorTwoDesiredY = GetY() * specificValueToAssign;
 
 	return VectorTwo(
 		vectorTwoDesiredX,
@@ -191,10 +191,10 @@ const VectorTwo VectorTwo::operator*(
 }
 
 const VectorTwo VectorTwo::operator/(
-	const float specificValueToAssign) const
+	const double specificValueToAssign) const
 {
-	const float vectorTwoDesiredX = GetX() / specificValueToAssign;
-	const float vectorTwoDesiredY = GetY() / specificValueToAssign;
+	const double vectorTwoDesiredX = GetX() / specificValueToAssign;
+	const double vectorTwoDesiredY = GetY() / specificValueToAssign;
 
 	return VectorTwo(
 		vectorTwoDesiredX,
@@ -202,10 +202,10 @@ const VectorTwo VectorTwo::operator/(
 }
 
 const VectorTwo& VectorTwo::operator*=(
-	const float specificValueToAssign)
+	const double specificValueToAssign)
 {
-	const float vectorTwoDesiredX = GetX() * specificValueToAssign;
-	const float vectorTwoDesiredY = GetY() * specificValueToAssign;
+	const double vectorTwoDesiredX = GetX() * specificValueToAssign;
+	const double vectorTwoDesiredY = GetY() * specificValueToAssign;
 
 	x = vectorTwoDesiredX;
 	y = vectorTwoDesiredY;
@@ -214,10 +214,10 @@ const VectorTwo& VectorTwo::operator*=(
 }
 
 const VectorTwo& VectorTwo::operator/=(
-	const float specificValueToAssign)
+	const double specificValueToAssign)
 {
-	const float vectorTwoDesiredX = GetX() / specificValueToAssign;
-	const float vectorTwoDesiredY = GetY() / specificValueToAssign;
+	const double vectorTwoDesiredX = GetX() / specificValueToAssign;
+	const double vectorTwoDesiredY = GetY() / specificValueToAssign;
 
 	x = vectorTwoDesiredX;
 	y = vectorTwoDesiredY;
@@ -225,12 +225,12 @@ const VectorTwo& VectorTwo::operator/=(
 	return *this;
 }
 
-const float VectorTwo::GetX() const
+const double VectorTwo::GetX() const
 {
 	return x;
 }
 
-const float VectorTwo::GetY() const
+const double VectorTwo::GetY() const
 {
 	return y;
 }
@@ -249,12 +249,12 @@ const bool VectorTwo::CompareBetween(
 const VectorTwo VectorTwo::ComputeUnclampedInterpolationUsing(
 	const VectorTwo& firstVectorTwoToCompute,
 	const VectorTwo& secondVectorTwoToCompute,
-	const float specificTimeToCompute)
+	const double specificTimeToCompute)
 {
-	const float vectorTwoDesiredX = firstVectorTwoToCompute.x +
+	const double vectorTwoDesiredX = firstVectorTwoToCompute.x +
 		(secondVectorTwoToCompute.x - firstVectorTwoToCompute.x) *
 		specificTimeToCompute;
-	const float vectorTwoDesiredY = firstVectorTwoToCompute.y +
+	const double vectorTwoDesiredY = firstVectorTwoToCompute.y +
 		(secondVectorTwoToCompute.y - firstVectorTwoToCompute.y) *
 		specificTimeToCompute;
 
@@ -266,11 +266,11 @@ const VectorTwo VectorTwo::ComputeUnclampedInterpolationUsing(
 const VectorTwo VectorTwo::ComputeClampedInterpolationUsing(
 	const VectorTwo& firstVectorTwoToCompute,
 	const VectorTwo& secondVectorTwoToCompute,
-	float specificTimeToCompute)
+	double specificTimeToCompute)
 {
 	VectorTwo vectorTwoDesiredState;
-	const float MinimumTimeToCompute = 0.0F;
-	const float MaximumTimeToCompute = 1.0F;
+	const double MinimumTimeToCompute = 0.0;
+	const double MaximumTimeToCompute = 1.0;
 
 	if (specificTimeToCompute <= MinimumTimeToCompute)
 	{
@@ -299,7 +299,7 @@ const VectorTwo VectorTwo::ComputeQuadraticBezierCurveUsing(
 	const VectorTwo& firstVectorTwoToCompute,
 	const VectorTwo& secondVectorTwoToCompute,
 	const VectorTwo& thirdVectorTwoToCompute,
-	const float specificTimeToCompute)
+	const double specificTimeToCompute)
 {
 	const VectorTwo vectorTwoDesiredABPoint = ComputeClampedInterpolationUsing(
 		firstVectorTwoToCompute,
@@ -321,7 +321,7 @@ const VectorTwo VectorTwo::ComputeCubicBezierCurveUsing(
 	const VectorTwo& secondVectorTwoToCompute,
 	const VectorTwo& thirdVectorTwoToCompute,
 	const VectorTwo& fourthVectorTwoToCompute,
-	const float specificTimeToCompute)
+	const double specificTimeToCompute)
 {
 	const VectorTwo vectorTwoDesiredABCPoint = ComputeQuadraticBezierCurveUsing(
 		firstVectorTwoToCompute,

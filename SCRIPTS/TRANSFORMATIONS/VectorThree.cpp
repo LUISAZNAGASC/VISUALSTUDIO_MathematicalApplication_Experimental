@@ -19,19 +19,19 @@ std::ostream& operator<<(
 }
 
 VectorThree::VectorThree() :
-	x(0.0F),
-	y(0.0F),
-	z(0.0F)
+	x(0.0),
+	y(0.0),
+	z(0.0)
 {
-	x = 0.0F;
-	y = 0.0F;
-	z = 0.0F;
+	x = 0.0;
+	y = 0.0;
+	z = 0.0;
 }
 
 VectorThree::VectorThree(
-	const float newXToInitialize,
-	const float newYToInitialize,
-	const float newZToInitialize) :
+	const double newXToInitialize,
+	const double newYToInitialize,
+	const double newZToInitialize) :
 	x(newXToInitialize),
 	y(newYToInitialize),
 	z(newZToInitialize)
@@ -54,9 +54,9 @@ VectorThree::VectorThree(
 
 VectorThree::~VectorThree()
 {
-	x = 0.0F;
-	y = 0.0F;
-	z = 0.0F;
+	x = 0.0;
+	y = 0.0;
+	z = 0.0;
 }
 
 const bool VectorThree::operator==(
@@ -92,9 +92,9 @@ const VectorThree& VectorThree::operator=(
 	}
 	else
 	{
-		const float vectorThreeDesiredX = otherVectorThreeToAssign.GetX();
-		const float vectorThreeDesiredY = otherVectorThreeToAssign.GetY();
-		const float vectorThreeDesiredZ = otherVectorThreeToAssign.GetZ();
+		const double vectorThreeDesiredX = otherVectorThreeToAssign.GetX();
+		const double vectorThreeDesiredY = otherVectorThreeToAssign.GetY();
+		const double vectorThreeDesiredZ = otherVectorThreeToAssign.GetZ();
 
 		x = vectorThreeDesiredX;
 		y = vectorThreeDesiredY;
@@ -107,9 +107,9 @@ const VectorThree& VectorThree::operator=(
 const VectorThree VectorThree::operator+(
 	const VectorThree& otherVectorThreeToAssign) const
 {
-	const float vectorThreeDesiredX = GetX() + otherVectorThreeToAssign.GetX();
-	const float vectorThreeDesiredY = GetY() + otherVectorThreeToAssign.GetY();
-	const float vectorThreeDesiredZ = GetZ() + otherVectorThreeToAssign.GetZ();
+	const double vectorThreeDesiredX = GetX() + otherVectorThreeToAssign.GetX();
+	const double vectorThreeDesiredY = GetY() + otherVectorThreeToAssign.GetY();
+	const double vectorThreeDesiredZ = GetZ() + otherVectorThreeToAssign.GetZ();
 
 	return VectorThree(
 		vectorThreeDesiredX,
@@ -120,9 +120,9 @@ const VectorThree VectorThree::operator+(
 const VectorThree VectorThree::operator-(
 	const VectorThree& otherVectorThreeToAssign) const
 {
-	const float vectorThreeDesiredX = GetX() - otherVectorThreeToAssign.GetX();
-	const float vectorThreeDesiredY = GetY() - otherVectorThreeToAssign.GetY();
-	const float vectorThreeDesiredZ = GetZ() - otherVectorThreeToAssign.GetZ();
+	const double vectorThreeDesiredX = GetX() - otherVectorThreeToAssign.GetX();
+	const double vectorThreeDesiredY = GetY() - otherVectorThreeToAssign.GetY();
+	const double vectorThreeDesiredZ = GetZ() - otherVectorThreeToAssign.GetZ();
 
 	return VectorThree(
 		vectorThreeDesiredX,
@@ -133,9 +133,9 @@ const VectorThree VectorThree::operator-(
 const VectorThree VectorThree::operator*(
 	const VectorThree& otherVectorThreeToAssign) const
 {
-	const float vectorThreeDesiredX = GetX() * otherVectorThreeToAssign.GetX();
-	const float vectorThreeDesiredY = GetY() * otherVectorThreeToAssign.GetY();
-	const float vectorThreeDesiredZ = GetZ() * otherVectorThreeToAssign.GetZ();
+	const double vectorThreeDesiredX = GetX() * otherVectorThreeToAssign.GetX();
+	const double vectorThreeDesiredY = GetY() * otherVectorThreeToAssign.GetY();
+	const double vectorThreeDesiredZ = GetZ() * otherVectorThreeToAssign.GetZ();
 
 	return VectorThree(
 		vectorThreeDesiredX,
@@ -146,9 +146,9 @@ const VectorThree VectorThree::operator*(
 const VectorThree VectorThree::operator/(
 	const VectorThree& otherVectorThreeToAssign) const
 {
-	const float vectorThreeDesiredX = GetX() / otherVectorThreeToAssign.GetX();
-	const float vectorThreeDesiredY = GetY() / otherVectorThreeToAssign.GetY();
-	const float vectorThreeDesiredZ = GetZ() / otherVectorThreeToAssign.GetZ();
+	const double vectorThreeDesiredX = GetX() / otherVectorThreeToAssign.GetX();
+	const double vectorThreeDesiredY = GetY() / otherVectorThreeToAssign.GetY();
+	const double vectorThreeDesiredZ = GetZ() / otherVectorThreeToAssign.GetZ();
 
 	return VectorThree(
 		vectorThreeDesiredX,
@@ -159,9 +159,9 @@ const VectorThree VectorThree::operator/(
 const VectorThree& VectorThree::operator+=(
 	const VectorThree& otherVectorThreeToAssign)
 {
-	const float vectorThreeDesiredX = GetX() + otherVectorThreeToAssign.GetX();
-	const float vectorThreeDesiredY = GetY() + otherVectorThreeToAssign.GetY();
-	const float vectorThreeDesiredZ = GetZ() + otherVectorThreeToAssign.GetZ();
+	const double vectorThreeDesiredX = GetX() + otherVectorThreeToAssign.GetX();
+	const double vectorThreeDesiredY = GetY() + otherVectorThreeToAssign.GetY();
+	const double vectorThreeDesiredZ = GetZ() + otherVectorThreeToAssign.GetZ();
 
 	x = vectorThreeDesiredX;
 	y = vectorThreeDesiredY;
@@ -173,9 +173,9 @@ const VectorThree& VectorThree::operator+=(
 const VectorThree& VectorThree::operator-=(
 	const VectorThree& otherVectorThreeToAssign)
 {
-	const float vectorThreeDesiredX = GetX() - otherVectorThreeToAssign.GetX();
-	const float vectorThreeDesiredY = GetY() - otherVectorThreeToAssign.GetY();
-	const float vectorThreeDesiredZ = GetZ() - otherVectorThreeToAssign.GetZ();
+	const double vectorThreeDesiredX = GetX() - otherVectorThreeToAssign.GetX();
+	const double vectorThreeDesiredY = GetY() - otherVectorThreeToAssign.GetY();
+	const double vectorThreeDesiredZ = GetZ() - otherVectorThreeToAssign.GetZ();
 
 	x = vectorThreeDesiredX;
 	y = vectorThreeDesiredY;
@@ -187,9 +187,9 @@ const VectorThree& VectorThree::operator-=(
 const VectorThree& VectorThree::operator*=(
 	const VectorThree& otherVectorThreeToAssign)
 {
-	const float vectorThreeDesiredX = GetX() * otherVectorThreeToAssign.GetX();
-	const float vectorThreeDesiredY = GetY() * otherVectorThreeToAssign.GetY();
-	const float vectorThreeDesiredZ = GetZ() * otherVectorThreeToAssign.GetZ();
+	const double vectorThreeDesiredX = GetX() * otherVectorThreeToAssign.GetX();
+	const double vectorThreeDesiredY = GetY() * otherVectorThreeToAssign.GetY();
+	const double vectorThreeDesiredZ = GetZ() * otherVectorThreeToAssign.GetZ();
 
 	x = vectorThreeDesiredX;
 	y = vectorThreeDesiredY;
@@ -201,9 +201,9 @@ const VectorThree& VectorThree::operator*=(
 const VectorThree& VectorThree::operator/=(
 	const VectorThree& otherVectorThreeToAssign)
 {
-	const float vectorThreeDesiredX = GetX() / otherVectorThreeToAssign.GetX();
-	const float vectorThreeDesiredY = GetY() / otherVectorThreeToAssign.GetY();
-	const float vectorThreeDesiredZ = GetZ() / otherVectorThreeToAssign.GetZ();
+	const double vectorThreeDesiredX = GetX() / otherVectorThreeToAssign.GetX();
+	const double vectorThreeDesiredY = GetY() / otherVectorThreeToAssign.GetY();
+	const double vectorThreeDesiredZ = GetZ() / otherVectorThreeToAssign.GetZ();
 
 	x = vectorThreeDesiredX;
 	y = vectorThreeDesiredY;
@@ -213,11 +213,11 @@ const VectorThree& VectorThree::operator/=(
 }
 
 const VectorThree VectorThree::operator*(
-	const float specificValueToAssign) const
+	const double specificValueToAssign) const
 {
-	const float vectorThreeDesiredX = GetX() * specificValueToAssign;
-	const float vectorThreeDesiredY = GetY() * specificValueToAssign;
-	const float vectorThreeDesiredZ = GetZ() * specificValueToAssign;
+	const double vectorThreeDesiredX = GetX() * specificValueToAssign;
+	const double vectorThreeDesiredY = GetY() * specificValueToAssign;
+	const double vectorThreeDesiredZ = GetZ() * specificValueToAssign;
 
 	return VectorThree(
 		vectorThreeDesiredX,
@@ -226,11 +226,11 @@ const VectorThree VectorThree::operator*(
 }
 
 const VectorThree VectorThree::operator/(
-	const float specificValueToAssign) const
+	const double specificValueToAssign) const
 {
-	const float vectorThreeDesiredX = GetX() / specificValueToAssign;
-	const float vectorThreeDesiredY = GetY() / specificValueToAssign;
-	const float vectorThreeDesiredZ = GetZ() / specificValueToAssign;
+	const double vectorThreeDesiredX = GetX() / specificValueToAssign;
+	const double vectorThreeDesiredY = GetY() / specificValueToAssign;
+	const double vectorThreeDesiredZ = GetZ() / specificValueToAssign;
 
 	return VectorThree(
 		vectorThreeDesiredX,
@@ -239,11 +239,11 @@ const VectorThree VectorThree::operator/(
 }
 
 const VectorThree& VectorThree::operator*=(
-	const float specificValueToAssign)
+	const double specificValueToAssign)
 {
-	const float vectorThreeDesiredX = GetX() * specificValueToAssign;
-	const float vectorThreeDesiredY = GetY() * specificValueToAssign;
-	const float vectorThreeDesiredZ = GetZ() * specificValueToAssign;
+	const double vectorThreeDesiredX = GetX() * specificValueToAssign;
+	const double vectorThreeDesiredY = GetY() * specificValueToAssign;
+	const double vectorThreeDesiredZ = GetZ() * specificValueToAssign;
 
 	x = vectorThreeDesiredX;
 	y = vectorThreeDesiredY;
@@ -253,11 +253,11 @@ const VectorThree& VectorThree::operator*=(
 }
 
 const VectorThree& VectorThree::operator/=(
-	const float specificValueToAssign)
+	const double specificValueToAssign)
 {
-	const float vectorThreeDesiredX = GetX() / specificValueToAssign;
-	const float vectorThreeDesiredY = GetY() / specificValueToAssign;
-	const float vectorThreeDesiredZ = GetZ() / specificValueToAssign;
+	const double vectorThreeDesiredX = GetX() / specificValueToAssign;
+	const double vectorThreeDesiredY = GetY() / specificValueToAssign;
+	const double vectorThreeDesiredZ = GetZ() / specificValueToAssign;
 
 	x = vectorThreeDesiredX;
 	y = vectorThreeDesiredY;
@@ -266,17 +266,17 @@ const VectorThree& VectorThree::operator/=(
 	return *this;
 }
 
-const float VectorThree::GetX() const
+const double VectorThree::GetX() const
 {
 	return x;
 }
 
-const float VectorThree::GetY() const
+const double VectorThree::GetY() const
 {
 	return y;
 }
 
-const float VectorThree::GetZ() const
+const double VectorThree::GetZ() const
 {
 	return z;
 }
@@ -295,15 +295,15 @@ const bool VectorThree::CompareBetween(
 const VectorThree VectorThree::ComputeUnclampedInterpolationUsing(
 	const VectorThree& firstVectorThreeToCompute,
 	const VectorThree& secondVectorThreeToCompute,
-	const float specificTimeToCompute)
+	const double specificTimeToCompute)
 {
-	const float vectorThreeDesiredX = firstVectorThreeToCompute.x +
+	const double vectorThreeDesiredX = firstVectorThreeToCompute.x +
 		(secondVectorThreeToCompute.x - firstVectorThreeToCompute.x) *
 		specificTimeToCompute;
-	const float vectorThreeDesiredY = firstVectorThreeToCompute.y +
+	const double vectorThreeDesiredY = firstVectorThreeToCompute.y +
 		(secondVectorThreeToCompute.y - firstVectorThreeToCompute.y) *
 		specificTimeToCompute;
-	const float vectorThreeDesiredZ = firstVectorThreeToCompute.z +
+	const double vectorThreeDesiredZ = firstVectorThreeToCompute.z +
 		(secondVectorThreeToCompute.z - firstVectorThreeToCompute.z) *
 		specificTimeToCompute;
 
@@ -316,11 +316,11 @@ const VectorThree VectorThree::ComputeUnclampedInterpolationUsing(
 const VectorThree VectorThree::ComputeClampedInterpolationUsing(
 	const VectorThree& firstVectorThreeToCompute,
 	const VectorThree& secondVectorThreeToCompute,
-	float specificTimeToCompute)
+	double specificTimeToCompute)
 {
 	VectorThree vectorThreeDesiredState;
-	const float MinimumTimeToCompute = 0.0F;
-	const float MaximumTimeToCompute = 1.0F;
+	const double MinimumTimeToCompute = 0.0;
+	const double MaximumTimeToCompute = 1.0;
 
 	if (specificTimeToCompute <= MinimumTimeToCompute)
 	{
@@ -349,7 +349,7 @@ const VectorThree VectorThree::ComputeQuadraticBezierCurveUsing(
 	const VectorThree& firstVectorThreeToCompute,
 	const VectorThree& secondVectorThreeToCompute,
 	const VectorThree& thirdVectorThreeToCompute,
-	const float specificTimeToCompute)
+	const double specificTimeToCompute)
 {
 	const VectorThree vectorThreeDesiredABPoint = ComputeClampedInterpolationUsing(
 		firstVectorThreeToCompute,
@@ -371,7 +371,7 @@ const VectorThree VectorThree::ComputeCubicBezierCurveUsing(
 	const VectorThree& secondVectorThreeToCompute,
 	const VectorThree& thirdVectorThreeToCompute,
 	const VectorThree& fourthVectorThreeToCompute,
-	const float specificTimeToCompute)
+	const double specificTimeToCompute)
 {
 	const VectorThree vectorThreeDesiredABCPoint = ComputeQuadraticBezierCurveUsing(
 		firstVectorThreeToCompute,

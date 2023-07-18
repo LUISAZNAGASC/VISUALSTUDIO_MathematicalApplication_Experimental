@@ -7,9 +7,9 @@
 class VectorThree
 {
 private:
-	float x = 0.0F;
-	float y = 0.0F;
-	float z = 0.0F;
+	double x = 0.0;
+	double y = 0.0;
+	double z = 0.0;
 
 	friend std::ostream& operator<<(
 		std::ostream& ostreamComponentToDisplay,
@@ -20,9 +20,9 @@ protected:
 public:
 	VectorThree();
 	VectorThree(
-		const float newXToInitialize,
-		const float newYToInitialize,
-		const float newZToInitialize);
+		const double newXToInitialize,
+		const double newYToInitialize,
+		const double newZToInitialize);
 	VectorThree(
 		const VectorThree& otherVectorThreeToCopy);
 	~VectorThree();
@@ -54,18 +54,18 @@ public:
 		const VectorThree& otherVectorThreeToAssign);
 
 	const VectorThree operator*(
-		const float specificValueToAssign) const;
+		const double specificValueToAssign) const;
 	const VectorThree operator/(
-		const float specificValueToAssign) const;
+		const double specificValueToAssign) const;
 
 	const VectorThree& operator*=(
-		const float specificValueToAssign);
+		const double specificValueToAssign);
 	const VectorThree& operator/=(
-		const float specificValueToAssign);
+		const double specificValueToAssign);
 
-	const float GetX() const;
-	const float GetY() const;
-	const float GetZ() const;
+	const double GetX() const;
+	const double GetY() const;
+	const double GetZ() const;
 
 	static const bool CompareBetween(
 		const VectorThree& firstVectorThreeToCompare,
@@ -74,22 +74,22 @@ public:
 	static const VectorThree ComputeUnclampedInterpolationUsing(
 		const VectorThree& firstVectorThreeToCompute,
 		const VectorThree& secondVectorThreeToCompute,
-		const float specificTimeToCompute);
+		const double specificTimeToCompute);
 	static const VectorThree ComputeClampedInterpolationUsing(
 		const VectorThree& firstVectorThreeToCompute,
 		const VectorThree& secondVectorThreeToCompute,
-		float specificTimeToCompute);
+		double specificTimeToCompute);
 	static const VectorThree ComputeQuadraticBezierCurveUsing(
 		const VectorThree& firstVectorThreeToCompute,
 		const VectorThree& secondVectorThreeToCompute,
 		const VectorThree& thirdVectorThreeToCompute,
-		const float specificTimeToCompute);
+		const double specificTimeToCompute);
 	static const VectorThree ComputeCubicBezierCurveUsing(
 		const VectorThree& firstVectorThreeToCompute,
 		const VectorThree& secondVectorThreeToCompute,
 		const VectorThree& thirdVectorThreeToCompute,
 		const VectorThree& fourthVectorThreeToCompute,
-		const float specificTimeToCompute);
+		const double specificTimeToCompute);
 };
 
 #endif
