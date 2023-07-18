@@ -74,13 +74,13 @@ const bool VectorThree::operator==(
 const bool VectorThree::operator!=(
 	const VectorThree& otherVectorThreeToCompare) const
 {
-	const bool vectorThreeXComparison = GetX() != otherVectorThreeToCompare.GetX();
-	const bool vectorThreeYComparison = GetY() != otherVectorThreeToCompare.GetY();
-	const bool vectorThreeZComparison = GetZ() != otherVectorThreeToCompare.GetZ();
+	const bool vectorThreeDesiredXComparison = GetX() != otherVectorThreeToCompare.GetX();
+	const bool vectorThreeDesiredYComparison = GetY() != otherVectorThreeToCompare.GetY();
+	const bool vectorThreeDesiredZComparison = GetZ() != otherVectorThreeToCompare.GetZ();
 
-	return vectorThreeXComparison == true ||
-		vectorThreeYComparison == true ||
-		vectorThreeZComparison == true;
+	return vectorThreeDesiredXComparison == true ||
+		vectorThreeDesiredYComparison == true ||
+		vectorThreeDesiredZComparison == true;
 }
 
 const VectorThree& VectorThree::operator=(

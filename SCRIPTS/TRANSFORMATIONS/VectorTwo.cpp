@@ -61,11 +61,11 @@ const bool VectorTwo::operator==(
 const bool VectorTwo::operator!=(
 	const VectorTwo& otherVectorTwoToCompare) const
 {
-	const bool vectorTwoXComparison = GetX() != otherVectorTwoToCompare.GetX();
-	const bool vectorTwoYComparison = GetY() != otherVectorTwoToCompare.GetY();
+	const bool vectorTwoDesiredXComparison = GetX() != otherVectorTwoToCompare.GetX();
+	const bool vectorTwoDesiredYComparison = GetY() != otherVectorTwoToCompare.GetY();
 
-	return vectorTwoXComparison == true ||
-		vectorTwoYComparison == true;
+	return vectorTwoDesiredXComparison == true ||
+		vectorTwoDesiredYComparison == true;
 }
 
 const VectorTwo& VectorTwo::operator=(
