@@ -3,8 +3,10 @@
   <ItemGroup>
     <ClCompile Include="SCRIPTS\CORE\WelcomeApplication.cpp" />
     <ClCompile Include="SCRIPTS\TRANSFORMATIONS\VectorTwo.cpp" />
+    <ClCompile Include="SCRIPTS\TRANSFORMATIONS\VectorThree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SCRIPTS\TRANSFORMATIONS\VectorTwo.hpp" />
+    <ClInclude Include="SCRIPTS\TRANSFORMATIONS\VectorThree.hpp" />
   </ItemGroup>
 </Project>
