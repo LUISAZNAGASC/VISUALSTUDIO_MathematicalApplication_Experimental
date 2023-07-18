@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "../../SCRIPTS/TRANSFORMATIONS/VectorTwo.hpp"
+#include "../../SCRIPTS/TRANSFORMATIONS/VectorThree.hpp"
 
 int main(void)
 {
