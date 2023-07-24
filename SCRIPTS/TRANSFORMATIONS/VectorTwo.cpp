@@ -258,6 +258,17 @@ const double VectorTwo::ComputeDistanceBetween(
 		vectorTwoFinalYDifference * vectorTwoFinalYDifference);
 }
 
+const double VectorTwo::ComputeDotProductUsing(
+	const VectorTwo& firstVectorTwoToCompute,
+	const VectorTwo& secondVectorTwoToCompute)
+{
+	const double vectorTwoFinalScalarX = firstVectorTwoToCompute.GetX() * secondVectorTwoToCompute.GetX();
+	const double vectorTwoFinalScalarY = firstVectorTwoToCompute.GetY() * secondVectorTwoToCompute.GetY();
+
+	return vectorTwoFinalScalarX +
+		vectorTwoFinalScalarY;
+}
+
 const VectorTwo VectorTwo::ComputeUnclampedInterpolationUsing(
 	const VectorTwo& firstVectorTwoToCompute,
 	const VectorTwo& secondVectorTwoToCompute,

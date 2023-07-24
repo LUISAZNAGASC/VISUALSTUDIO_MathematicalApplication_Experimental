@@ -73,6 +73,10 @@ public:
 		const VectorTwo& firstVectorTwoToCompute,
 		const VectorTwo& secondVectorTwoToCompute);
 
+	static const double ComputeDotProductUsing(
+		const VectorTwo& firstVectorTwoToCompute,
+		const VectorTwo& secondVectorTwoToCompute);
+
 	static const VectorTwo ComputeUnclampedInterpolationUsing(
 		const VectorTwo& firstVectorTwoToCompute,
 		const VectorTwo& secondVectorTwoToCompute,

@@ -306,6 +306,36 @@ const double VectorThree::ComputeDistanceBetween(
 		vectorThreeFinalZDifference * vectorThreeFinalZDifference);
 }
 
+const double VectorThree::ComputeDotProductUsing(
+	const VectorThree& firstVectorThreeToCompute,
+	const VectorThree& secondVectorThreeToCompute)
+{
+	const double vectorThreeFinalScalarX = firstVectorThreeToCompute.GetX() * secondVectorThreeToCompute.GetX();
+	const double vectorThreeFinalScalarY = firstVectorThreeToCompute.GetY() * secondVectorThreeToCompute.GetY();
+	const double vectorThreeFinalScalarZ = firstVectorThreeToCompute.GetZ() * secondVectorThreeToCompute.GetZ();
+
+	return vectorThreeFinalScalarX +
+		vectorThreeFinalScalarY +
+		vectorThreeFinalScalarZ;
+}
+
+const VectorThree VectorThree::ComputeCrossProductUsing(
+	const VectorThree& firstVectorThreeToCompute,
+	const VectorThree& secondVectorThreeToCompute)
+{
+	const double vectorThreeDesiredX = firstVectorThreeToCompute.GetY() * secondVectorThreeToCompute.GetZ() -
+		firstVectorThreeToCompute.GetZ() * secondVectorThreeToCompute.GetY();
+	const double vectorThreeDesiredY = firstVectorThreeToCompute.GetZ() * secondVectorThreeToCompute.GetX() -
+		firstVectorThreeToCompute.GetX() * secondVectorThreeToCompute.GetZ();
+	const double vectorThreeDesiredZ = firstVectorThreeToCompute.GetX() * secondVectorThreeToCompute.GetY() -
+		firstVectorThreeToCompute.GetY() * secondVectorThreeToCompute.GetX();
+
+	return VectorThree(
+		vectorThreeDesiredX,
+		vectorThreeDesiredY,
+		vectorThreeDesiredZ);
+}
+
 const VectorThree VectorThree::ComputeUnclampedInterpolationUsing(
 	const VectorThree& firstVectorThreeToCompute,
 	const VectorThree& secondVectorThreeToCompute,

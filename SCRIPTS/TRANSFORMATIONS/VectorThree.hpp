@@ -76,6 +76,13 @@ public:
 		const VectorThree& firstVectorThreeToCompute,
 		const VectorThree& secondVectorThreeToCompute);
 
+	static const double ComputeDotProductUsing(
+		const VectorThree& firstVectorThreeToCompute,
+		const VectorThree& secondVectorThreeToCompute);
+	static const VectorThree ComputeCrossProductUsing(
+		const VectorThree& firstVectorThreeToCompute,
+		const VectorThree& secondVectorThreeToCompute);
+
 	static const VectorThree ComputeUnclampedInterpolationUsing(
 		const VectorThree& firstVectorThreeToCompute,
 		const VectorThree& secondVectorThreeToCompute,
