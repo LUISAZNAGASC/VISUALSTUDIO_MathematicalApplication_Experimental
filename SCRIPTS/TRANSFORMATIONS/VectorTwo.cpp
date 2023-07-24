@@ -246,6 +246,18 @@ const bool VectorTwo::CompareBetween(
 		vectorTwoDifferenceComparison == true;
 }
 
+const double VectorTwo::ComputeDistanceBetween(
+	const VectorTwo& firstVectorTwoToCompute,
+	const VectorTwo& secondVectorTwoToCompute)
+{
+	const double vectorTwoFinalXDifference = firstVectorTwoToCompute.GetX() - secondVectorTwoToCompute.GetX();
+	const double vectorTwoFinalYDifference = firstVectorTwoToCompute.GetY() - secondVectorTwoToCompute.GetY();
+
+	return std::sqrt(
+		vectorTwoFinalXDifference * vectorTwoFinalXDifference +
+		vectorTwoFinalYDifference * vectorTwoFinalYDifference);
+}
+
 const VectorTwo VectorTwo::ComputeUnclampedInterpolationUsing(
 	const VectorTwo& firstVectorTwoToCompute,
 	const VectorTwo& secondVectorTwoToCompute,

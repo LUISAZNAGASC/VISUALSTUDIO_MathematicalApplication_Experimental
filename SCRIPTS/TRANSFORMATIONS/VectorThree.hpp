@@ -2,6 +2,7 @@
 #define _VECTOR_THREE_HPP_
 
 #include <iostream>
+#include <cmath>
 
 #pragma once
 class VectorThree
@@ -70,6 +71,10 @@ public:
 	static const bool CompareBetween(
 		const VectorThree& firstVectorThreeToCompare,
 		const VectorThree& secondVectorThreeToCompare);
+
+	static const double ComputeDistanceBetween(
+		const VectorThree& firstVectorThreeToCompute,
+		const VectorThree& secondVectorThreeToCompute);
 
 	static const VectorThree ComputeUnclampedInterpolationUsing(
 		const VectorThree& firstVectorThreeToCompute,

@@ -292,6 +292,20 @@ const bool VectorThree::CompareBetween(
 		vectorThreeDifferenceComparison == true;
 }
 
+const double VectorThree::ComputeDistanceBetween(
+	const VectorThree& firstVectorThreeToCompute,
+	const VectorThree& secondVectorThreeToCompute)
+{
+	const double vectorThreeFinalXDifference = firstVectorThreeToCompute.GetX() - secondVectorThreeToCompute.GetX();
+	const double vectorThreeFinalYDifference = firstVectorThreeToCompute.GetY() - secondVectorThreeToCompute.GetY();
+	const double vectorThreeFinalZDifference = firstVectorThreeToCompute.GetZ() - secondVectorThreeToCompute.GetZ();
+
+	return std::sqrt(
+		vectorThreeFinalXDifference * vectorThreeFinalXDifference +
+		vectorThreeFinalYDifference * vectorThreeFinalYDifference +
+		vectorThreeFinalZDifference * vectorThreeFinalZDifference);
+}
+
 const VectorThree VectorThree::ComputeUnclampedInterpolationUsing(
 	const VectorThree& firstVectorThreeToCompute,
 	const VectorThree& secondVectorThreeToCompute,

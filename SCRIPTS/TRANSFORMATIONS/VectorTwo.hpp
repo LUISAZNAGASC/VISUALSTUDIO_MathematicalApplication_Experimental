@@ -2,6 +2,7 @@
 #define _VECTOR_TWO_HPP_
 
 #include <iostream>
+#include <cmath>
 
 #pragma once
 class VectorTwo
@@ -67,6 +68,10 @@ public:
 	static const bool CompareBetween(
 		const VectorTwo& firstVectorTwoToCompare,
 		const VectorTwo& secondVectorTwoToCompare);
+
+	static const double ComputeDistanceBetween(
+		const VectorTwo& firstVectorTwoToCompute,
+		const VectorTwo& secondVectorTwoToCompute);
 
 	static const VectorTwo ComputeUnclampedInterpolationUsing(
 		const VectorTwo& firstVectorTwoToCompute,
