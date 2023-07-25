@@ -65,8 +65,6 @@ public:
 	const double GetX() const;
 	const double GetY() const;
 
-	const double GetMagnitude() const;
-
 	static const bool CompareBetween(
 		const VectorTwo& firstVectorTwoToCompare,
 		const VectorTwo& secondVectorTwoToCompare);
@@ -74,6 +72,9 @@ public:
 	static const double ComputeDistanceBetween(
 		const VectorTwo& firstVectorTwoToCompute,
 		const VectorTwo& secondVectorTwoToCompute);
+
+	static const double ComputeMagnitudeUsing(
+		const VectorTwo& otherVectorTwoToCompute);
 
 	static const double ComputeDotProductUsing(
 		const VectorTwo& firstVectorTwoToCompute,

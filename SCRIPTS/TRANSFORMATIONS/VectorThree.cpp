@@ -281,18 +281,6 @@ const double VectorThree::GetZ() const
 	return z;
 }
 
-const double VectorThree::GetMagnitude() const
-{
-	const double vectorThreeXSquared = GetX() * GetX();
-	const double vectorThreeYSquared = GetY() * GetY();
-	const double vectorThreeZSquared = GetZ() * GetZ();
-
-	return std::sqrt(
-		vectorThreeXSquared +
-		vectorThreeYSquared +
-		vectorThreeZSquared);
-}
-
 const bool VectorThree::CompareBetween(
 	const VectorThree& firstVectorThreeToCompare,
 	const VectorThree& secondVectorThreeToCompare)
@@ -316,6 +304,19 @@ const double VectorThree::ComputeDistanceBetween(
 		vectorThreeFinalXDifference * vectorThreeFinalXDifference +
 		vectorThreeFinalYDifference * vectorThreeFinalYDifference +
 		vectorThreeFinalZDifference * vectorThreeFinalZDifference);
+}
+
+const double VectorThree::ComputeMagnitudeUsing(
+	const VectorThree& otherVectorThreeToCompute)
+{
+	const double otherVectorThreeXSquared = otherVectorThreeToCompute.GetX() * otherVectorThreeToCompute.GetX();
+	const double otherVectorThreeYSquared = otherVectorThreeToCompute.GetY() * otherVectorThreeToCompute.GetY();
+	const double otherVectorThreeZSquared = otherVectorThreeToCompute.GetZ() * otherVectorThreeToCompute.GetZ();
+
+	return std::sqrt(
+		otherVectorThreeXSquared +
+		otherVectorThreeYSquared +
+		otherVectorThreeZSquared);
 }
 
 const double VectorThree::ComputeDotProductUsing(

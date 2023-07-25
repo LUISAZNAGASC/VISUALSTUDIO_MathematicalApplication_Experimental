@@ -235,16 +235,6 @@ const double VectorTwo::GetY() const
 	return y;
 }
 
-const double VectorTwo::GetMagnitude() const
-{
-	const double vectorTwoXSquared = GetX() * GetX();
-	const double vectorTwoYSquared = GetY() * GetY();
-
-	return std::sqrt(
-		vectorTwoXSquared +
-		vectorTwoYSquared);
-}
-
 const bool VectorTwo::CompareBetween(
 	const VectorTwo& firstVectorTwoToCompare,
 	const VectorTwo& secondVectorTwoToCompare)
@@ -266,6 +256,17 @@ const double VectorTwo::ComputeDistanceBetween(
 	return std::sqrt(
 		vectorTwoFinalXDifference * vectorTwoFinalXDifference +
 		vectorTwoFinalYDifference * vectorTwoFinalYDifference);
+}
+
+const double VectorTwo::ComputeMagnitudeUsing(
+	const VectorTwo& otherVectorTwoToCompute)
+{
+	const double otherVectorTwoXSquared = otherVectorTwoToCompute.GetX() * otherVectorTwoToCompute.GetX();
+	const double otherVectorTwoYSquared = otherVectorTwoToCompute.GetY() * otherVectorTwoToCompute.GetY();
+
+	return std::sqrt(
+		otherVectorTwoXSquared +
+		otherVectorTwoYSquared);
 }
 
 const double VectorTwo::ComputeDotProductUsing(
