@@ -75,6 +75,8 @@ public:
 
 	static const double ComputeMagnitudeUsing(
 		const VectorTwo& otherVectorTwoToCompute);
+	static const VectorTwo ComputeNormalizedUsing(
+		const VectorTwo& otherVectorTwoToCompute);
 
 	static const double ComputeDotProductUsing(
 		const VectorTwo& firstVectorTwoToCompute,

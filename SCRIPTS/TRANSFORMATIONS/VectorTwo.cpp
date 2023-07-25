@@ -269,6 +269,31 @@ const double VectorTwo::ComputeMagnitudeUsing(
 		otherVectorTwoYSquared);
 }
 
+const VectorTwo VectorTwo::ComputeNormalizedUsing(
+	const VectorTwo& otherVectorTwoToCompute)
+{
+	const float otherVectorTwoMagnitude = ComputeMagnitudeUsing(
+		otherVectorTwoToCompute);
+
+	double vectorTwoDesiredX;
+	double vectorTwoDesiredY;
+
+	if (otherVectorTwoMagnitude > 0.0)
+	{
+		vectorTwoDesiredX = otherVectorTwoToCompute.GetX() / otherVectorTwoMagnitude;
+		vectorTwoDesiredY = otherVectorTwoToCompute.GetY() / otherVectorTwoMagnitude;
+	}
+	else
+	{
+		vectorTwoDesiredX = 0.0;
+		vectorTwoDesiredY = 0.0;
+	}
+
+	return VectorTwo(
+		vectorTwoDesiredX,
+		vectorTwoDesiredY);
+}
+
 const double VectorTwo::ComputeDotProductUsing(
 	const VectorTwo& firstVectorTwoToCompute,
 	const VectorTwo& secondVectorTwoToCompute)

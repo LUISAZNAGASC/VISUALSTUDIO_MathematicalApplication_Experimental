@@ -319,6 +319,35 @@ const double VectorThree::ComputeMagnitudeUsing(
 		otherVectorThreeZSquared);
 }
 
+const VectorThree VectorThree::ComputeNormalizedUsing(
+	const VectorThree& otherVectorThreeToCompute)
+{
+	const float otherVectorThreeMagnitude = ComputeMagnitudeUsing(
+		otherVectorThreeToCompute);
+
+	double vectorThreeDesiredX;
+	double vectorThreeDesiredY;
+	double vectorThreeDesiredZ;
+
+	if (otherVectorThreeMagnitude > 0.0)
+	{
+		vectorThreeDesiredX = otherVectorThreeToCompute.GetX() / otherVectorThreeMagnitude;
+		vectorThreeDesiredY = otherVectorThreeToCompute.GetY() / otherVectorThreeMagnitude;
+		vectorThreeDesiredZ = otherVectorThreeToCompute.GetZ() / otherVectorThreeMagnitude;
+	}
+	else
+	{
+		vectorThreeDesiredX = 0.0;
+		vectorThreeDesiredY = 0.0;
+		vectorThreeDesiredZ = 0.0;
+	}
+
+	return VectorThree(
+		vectorThreeDesiredX,
+		vectorThreeDesiredY,
+		vectorThreeDesiredZ);
+}
+
 const double VectorThree::ComputeDotProductUsing(
 	const VectorThree& firstVectorThreeToCompute,
 	const VectorThree& secondVectorThreeToCompute)
