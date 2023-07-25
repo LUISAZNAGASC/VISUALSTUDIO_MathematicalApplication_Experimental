@@ -281,6 +281,18 @@ const double VectorThree::GetZ() const
 	return z;
 }
 
+const double VectorThree::GetMagnitude() const
+{
+	const double vectorThreeXSquared = GetX() * GetX();
+	const double vectorThreeYSquared = GetY() * GetY();
+	const double vectorThreeZSquared = GetZ() * GetZ();
+
+	return std::sqrt(
+		vectorThreeXSquared +
+		vectorThreeYSquared +
+		vectorThreeZSquared);
+}
+
 const bool VectorThree::CompareBetween(
 	const VectorThree& firstVectorThreeToCompare,
 	const VectorThree& secondVectorThreeToCompare)

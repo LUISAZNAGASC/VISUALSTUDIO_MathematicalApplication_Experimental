@@ -68,6 +68,8 @@ public:
 	const double GetY() const;
 	const double GetZ() const;
 
+	const double GetMagnitude() const;
+
 	static const bool CompareBetween(
 		const VectorThree& firstVectorThreeToCompare,
 		const VectorThree& secondVectorThreeToCompare);

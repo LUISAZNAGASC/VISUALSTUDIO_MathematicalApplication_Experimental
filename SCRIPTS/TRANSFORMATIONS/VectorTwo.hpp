@@ -65,6 +65,8 @@ public:
 	const double GetX() const;
 	const double GetY() const;
 
+	const double GetMagnitude() const;
+
 	static const bool CompareBetween(
 		const VectorTwo& firstVectorTwoToCompare,
 		const VectorTwo& secondVectorTwoToCompare);

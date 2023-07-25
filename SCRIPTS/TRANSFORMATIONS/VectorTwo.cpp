@@ -235,6 +235,16 @@ const double VectorTwo::GetY() const
 	return y;
 }
 
+const double VectorTwo::GetMagnitude() const
+{
+	const double vectorTwoXSquared = GetX() * GetX();
+	const double vectorTwoYSquared = GetY() * GetY();
+
+	return std::sqrt(
+		vectorTwoXSquared +
+		vectorTwoYSquared);
+}
+
 const bool VectorTwo::CompareBetween(
 	const VectorTwo& firstVectorTwoToCompare,
 	const VectorTwo& secondVectorTwoToCompare)
