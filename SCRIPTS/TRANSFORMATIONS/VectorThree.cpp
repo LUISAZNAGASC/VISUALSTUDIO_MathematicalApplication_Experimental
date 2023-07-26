@@ -319,6 +319,18 @@ const double VectorThree::ComputeRealMagnitudeUsing(
 		otherVectorThreeZSquared);
 }
 
+const double VectorThree::ComputeSquaredMagnitudeUsing(
+	const VectorThree& otherVectorThreeToCompute)
+{
+	const double otherVectorThreeXSquared = otherVectorThreeToCompute.GetX() * otherVectorThreeToCompute.GetX();
+	const double otherVectorThreeYSquared = otherVectorThreeToCompute.GetY() * otherVectorThreeToCompute.GetY();
+	const double otherVectorThreeZSquared = otherVectorThreeToCompute.GetZ() * otherVectorThreeToCompute.GetZ();
+
+	return otherVectorThreeXSquared +
+		otherVectorThreeYSquared +
+		otherVectorThreeZSquared;
+}
+
 const VectorThree VectorThree::ComputeNormalizedUsing(
 	const VectorThree& otherVectorThreeToCompute)
 {

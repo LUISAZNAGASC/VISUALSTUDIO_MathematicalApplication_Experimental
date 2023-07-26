@@ -269,6 +269,16 @@ const double VectorTwo::ComputeRealMagnitudeUsing(
 		otherVectorTwoYSquared);
 }
 
+const double VectorTwo::ComputeSquaredMagnitudeUsing(
+	const VectorTwo& otherVectorTwoToCompute)
+{
+	const double otherVectorTwoXSquared = otherVectorTwoToCompute.GetX() * otherVectorTwoToCompute.GetX();
+	const double otherVectorTwoYSquared = otherVectorTwoToCompute.GetY() * otherVectorTwoToCompute.GetY();
+
+	return otherVectorTwoXSquared +
+		otherVectorTwoYSquared;
+}
+
 const VectorTwo VectorTwo::ComputeNormalizedUsing(
 	const VectorTwo& otherVectorTwoToCompute)
 {

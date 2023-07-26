@@ -75,6 +75,8 @@ public:
 
 	static const double ComputeRealMagnitudeUsing(
 		const VectorTwo& otherVectorTwoToCompute);
+	static const double ComputeSquaredMagnitudeUsing(
+		const VectorTwo& otherVectorTwoToCompute);
 
 	static const VectorTwo ComputeNormalizedUsing(
 		const VectorTwo& otherVectorTwoToCompute);
