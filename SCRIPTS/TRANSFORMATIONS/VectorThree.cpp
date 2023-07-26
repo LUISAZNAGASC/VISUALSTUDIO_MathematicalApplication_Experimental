@@ -331,6 +331,43 @@ const double VectorThree::ComputeSquaredMagnitudeUsing(
 		otherVectorThreeZSquared;
 }
 
+const VectorThree VectorThree::ClampMagnitudeUsing(
+	const VectorThree& otherVectorThreeToCompute,
+	const double maximumVectorLengthToCompute)
+{
+	const double otherVectorThrreeSquaredMagnitude = ComputeSquaredMagnitudeUsing(
+		otherVectorThreeToCompute);
+
+	double otherVectorThreeDesiredX;
+	double otherVectorThreeDesiredY;
+	double otherVectorThreeDesiredZ;
+
+	if (otherVectorThrreeSquaredMagnitude > maximumVectorLengthToCompute * maximumVectorLengthToCompute)
+	{
+		const double otherVectorThreeRealMagnitude = ComputeRealMagnitudeUsing(
+			otherVectorThreeToCompute);
+
+		const double otherVectorThreeXNormalized = otherVectorThreeToCompute.GetX() / otherVectorThreeRealMagnitude;
+		const double otherVectorThreeYNormalized = otherVectorThreeToCompute.GetY() / otherVectorThreeRealMagnitude;
+		const double otherVectorThreeZNormalized = otherVectorThreeToCompute.GetZ() / otherVectorThreeRealMagnitude;
+
+		otherVectorThreeDesiredX = otherVectorThreeXNormalized * maximumVectorLengthToCompute;
+		otherVectorThreeDesiredY = otherVectorThreeYNormalized * maximumVectorLengthToCompute;
+		otherVectorThreeDesiredZ = otherVectorThreeZNormalized * maximumVectorLengthToCompute;
+	}
+	else
+	{
+		otherVectorThreeDesiredX = otherVectorThreeToCompute.GetX();
+		otherVectorThreeDesiredY = otherVectorThreeToCompute.GetY();
+		otherVectorThreeDesiredZ = otherVectorThreeToCompute.GetZ();
+	}
+
+	return VectorThree(
+		otherVectorThreeDesiredX,
+		otherVectorThreeDesiredY,
+		otherVectorThreeDesiredZ);
+}
+
 const VectorThree VectorThree::ComputeNormalizedUsing(
 	const VectorThree& otherVectorThreeToCompute)
 {

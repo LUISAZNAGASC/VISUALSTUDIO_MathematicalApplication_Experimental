@@ -279,6 +279,38 @@ const double VectorTwo::ComputeSquaredMagnitudeUsing(
 		otherVectorTwoYSquared;
 }
 
+const VectorTwo VectorTwo::ClampMagnitudeUsing(
+	const VectorTwo& otherVectorTwoToCompute,
+	const double maximumVectorLengthToCompute)
+{
+	const double otherVectorTwoSquaredMagnitude = ComputeSquaredMagnitudeUsing(
+		otherVectorTwoToCompute);
+
+	double otherVectorTwoDesiredX;
+	double otherVectorTwoDesiredY;
+
+	if (otherVectorTwoSquaredMagnitude > maximumVectorLengthToCompute * maximumVectorLengthToCompute)
+	{
+		const double otherVectorTwoRealMagnitude = ComputeRealMagnitudeUsing(
+			otherVectorTwoToCompute);
+
+		const double otherVectorTwoXNormalized = otherVectorTwoToCompute.GetX() / otherVectorTwoRealMagnitude;
+		const double otherVectorTwoYNormalized = otherVectorTwoToCompute.GetY() / otherVectorTwoRealMagnitude;
+
+		otherVectorTwoDesiredX = otherVectorTwoXNormalized * maximumVectorLengthToCompute;
+		otherVectorTwoDesiredY = otherVectorTwoYNormalized * maximumVectorLengthToCompute;
+	}
+	else
+	{
+		otherVectorTwoDesiredX = otherVectorTwoToCompute.GetX();
+		otherVectorTwoDesiredY = otherVectorTwoToCompute.GetY();
+	}
+
+	return VectorTwo(
+		otherVectorTwoDesiredX,
+		otherVectorTwoDesiredY);
+}
+
 const VectorTwo VectorTwo::ComputeNormalizedUsing(
 	const VectorTwo& otherVectorTwoToCompute)
 {

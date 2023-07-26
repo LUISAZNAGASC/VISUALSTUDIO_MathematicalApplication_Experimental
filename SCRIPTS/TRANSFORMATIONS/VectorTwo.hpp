@@ -77,6 +77,9 @@ public:
 		const VectorTwo& otherVectorTwoToCompute);
 	static const double ComputeSquaredMagnitudeUsing(
 		const VectorTwo& otherVectorTwoToCompute);
+	static const VectorTwo ClampMagnitudeUsing(
+		const VectorTwo& otherVectorTwoToCompute,
+		const double maximumVectorLengthToCompute);
 
 	static const VectorTwo ComputeNormalizedUsing(
 		const VectorTwo& otherVectorTwoToCompute);

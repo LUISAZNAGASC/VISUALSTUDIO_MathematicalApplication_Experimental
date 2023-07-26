@@ -80,6 +80,9 @@ public:
 		const VectorThree& otherVectorThreeToCompute);
 	static const double ComputeSquaredMagnitudeUsing(
 		const VectorThree& otherVectorThreeToCompute);
+	static const VectorThree ClampMagnitudeUsing(
+		const VectorThree& otherVectorThreeToCompute,
+		const double maximumVectorLengthToCompute);
 
 	static const VectorThree ComputeNormalizedUsing(
 		const VectorThree& otherVectorThreeToCompute);
