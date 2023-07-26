@@ -306,7 +306,7 @@ const double VectorThree::ComputeDistanceBetween(
 		vectorThreeFinalZDifference * vectorThreeFinalZDifference);
 }
 
-const double VectorThree::ComputeMagnitudeUsing(
+const double VectorThree::ComputeRealMagnitudeUsing(
 	const VectorThree& otherVectorThreeToCompute)
 {
 	const double otherVectorThreeXSquared = otherVectorThreeToCompute.GetX() * otherVectorThreeToCompute.GetX();
@@ -322,7 +322,7 @@ const double VectorThree::ComputeMagnitudeUsing(
 const VectorThree VectorThree::ComputeNormalizedUsing(
 	const VectorThree& otherVectorThreeToCompute)
 {
-	const float otherVectorThreeMagnitude = ComputeMagnitudeUsing(
+	const float otherVectorThreeMagnitude = ComputeRealMagnitudeUsing(
 		otherVectorThreeToCompute);
 
 	double vectorThreeDesiredX;

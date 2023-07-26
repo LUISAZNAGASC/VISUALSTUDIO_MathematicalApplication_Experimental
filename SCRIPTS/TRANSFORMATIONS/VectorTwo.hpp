@@ -73,8 +73,9 @@ public:
 		const VectorTwo& firstVectorTwoToCompute,
 		const VectorTwo& secondVectorTwoToCompute);
 
-	static const double ComputeMagnitudeUsing(
+	static const double ComputeRealMagnitudeUsing(
 		const VectorTwo& otherVectorTwoToCompute);
+
 	static const VectorTwo ComputeNormalizedUsing(
 		const VectorTwo& otherVectorTwoToCompute);
 

@@ -258,7 +258,7 @@ const double VectorTwo::ComputeDistanceBetween(
 		vectorTwoFinalYDifference * vectorTwoFinalYDifference);
 }
 
-const double VectorTwo::ComputeMagnitudeUsing(
+const double VectorTwo::ComputeRealMagnitudeUsing(
 	const VectorTwo& otherVectorTwoToCompute)
 {
 	const double otherVectorTwoXSquared = otherVectorTwoToCompute.GetX() * otherVectorTwoToCompute.GetX();
@@ -272,7 +272,7 @@ const double VectorTwo::ComputeMagnitudeUsing(
 const VectorTwo VectorTwo::ComputeNormalizedUsing(
 	const VectorTwo& otherVectorTwoToCompute)
 {
-	const float otherVectorTwoMagnitude = ComputeMagnitudeUsing(
+	const float otherVectorTwoMagnitude = ComputeRealMagnitudeUsing(
 		otherVectorTwoToCompute);
 
 	double vectorTwoDesiredX;
